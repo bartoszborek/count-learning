@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="modules/Bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/dodawanie.css">
-<title>Artur zadania</title>
+<title>Zadania</title>
 </head>
-<body background="images/dora-the-explorer.jpg" ng-app="DodawanieApp" ng-controller="DodawanieController" style="font-size:24px;">
+<body background="images/dora-the-explorer.jpg" ng-app="LearningApp" ng-controller="LeariningController" style="font-size:24px;">
 
 <div id="prv-billboard"></div>
 
@@ -15,7 +15,7 @@
 	<tbody>
 		<tr ng-repeat="zad in zadania" track by $index ng-class="{'good-line': zad.isValid && zad.computed, 'bad-line' : !zad.isValid && zad.computed}">
 			<td>
-				<span>{{zad.operation}} =  </span><input style="width:180px" ng-hide="zad.computed" type="number" ng-model="zad.result" ng-blur="checkResult($index)"></input><span ng-show="zad.computed" ng-bind="zad.result"></span>
+				<span>{{zad.operation}} =  </span><input style="width:150px" ng-hide="zad.computed" type="number" ng-model="zad.result" ng-blur="checkResult($index)"></input><span ng-show="zad.computed" ng-bind="zad.result"></span>
 			</td>
 			<td >
 <!-- 				<i ng-class="{'good': zad.isValid && zad.computed, 'bad' : !zad.isValid && zad.computed}"></i> -->
@@ -36,8 +36,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="modules/Bootstrap/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
     
-    <script src="js/DodawanieApp.js"></script>
-    <script src="js/DodawanieController.js"></script>
+    <script src="js/LearningApp.js"></script>
+    <script src="js/controllers/LeariningController.js"></script>
+    <script src="js/services/OperationRegistryService.js"></script>
+    <script src="js/services/ApplicationConfigurationService.js"></script>
+    <script src="js/services/Sum2NumbersService.js"></script>
+    <script src="js/services/Sum3NumbersService.js"></script>
+    <script src="js/services/Minus2NumbersService.js"></script>
+    <script src="js/services/Multiple2NumbersService.js"></script>
+    
+    
   </body>
 </body>
 </html>
