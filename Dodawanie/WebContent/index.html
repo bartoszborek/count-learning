@@ -11,11 +11,11 @@
 <div id="prv-billboard"></div>
 
 <div class="table-responsive">
-	<table class="table table-sm" style="width:330px; margin-left: 300px;    background-color: white;">
+	<table class="table table-sm" style="width:350px; margin-left: 300px;    background-color: white;">
 	<tbody>
 		<tr ng-repeat="zad in zadania" track by $index ng-class="{'good-line': zad.isValid && zad.computed, 'bad-line' : !zad.isValid && zad.computed}">
 			<td>
-				<span>{{zad.operation}} =  </span><input style="width:150px" ng-hide="zad.computed" type="number" ng-model="zad.result" ng-blur="checkResult($index)"></input><span ng-show="zad.computed" ng-bind="zad.result"></span>
+				<span>{{zad.operation}} =  </span><input style="width:180px" ng-hide="zad.computed" type="number" ng-model="zad.result" ng-blur="checkResult($index)"></input><span ng-show="zad.computed" ng-bind="zad.result"></span>
 			</td>
 			<td >
 <!-- 				<i ng-class="{'good': zad.isValid && zad.computed, 'bad' : !zad.isValid && zad.computed}"></i> -->
