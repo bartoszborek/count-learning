@@ -1,0 +1,32 @@
+i {
+	font-size : 16px;
+	max-width: 24px;
+	max-height: 24px;
+	background-size: 24px;
+	background-repeat: no-repeat;
+	padding: 12px;
+}
+
+.good {
+	background-image : url("../images/good.jpg")
+}
+
+.bad {
+	background-image : url("../images/bad.jpg")
+}
+
+img {
+	max-height: 32px;
+}
+
+.good-line {
+	background-color: azure;
+}
+
+.bad-line {
+	background-color: antiquewhite;
+}
+
+.summary {
+	background-color: white;
+}
