@@ -30,6 +30,9 @@
 	<img src="images/good.jpg"></img> : {{summary.valid}}<br>
 	<img src="images/bad.jpg"></img> : {{summary.invalid}}
 </span>
+<div style="float: right;">
+	<button class="btn" ng-click="clearStorage()">Clear</button>
+</div>
 
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="modules/Angular/js/angular.min.js"></script>
@@ -44,6 +47,8 @@
     <script src="js/services/Sum3NumbersService.js"></script>
     <script src="js/services/Minus2NumbersService.js"></script>
     <script src="js/services/Multiple2NumbersService.js"></script>
+    <script src="js/services/LocalStateService.js"></script>
+    
     
     
   </body>
