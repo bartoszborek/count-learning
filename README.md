@@ -1,2 +1,2 @@
 # count-learning
-Nauka liczenie
+Nauka liczenia
