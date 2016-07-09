@@ -12,7 +12,7 @@ app.factory('sum2NumbersService',
 									* configObj.maxPos1 + 1));
 							var var2 = Math.floor((Math.random()
 									* configObj.maxPos2 + 1));
-							while (var1 + var2 <= configObj.maxResult) {
+							while (var1 + var2 > configObj.maxResult) {
 								var1 = Math.floor((Math.random()
 										* configObj.maxPos1 + 1));
 								var2 = Math.floor((Math.random()
