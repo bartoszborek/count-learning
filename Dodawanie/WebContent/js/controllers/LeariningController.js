@@ -31,21 +31,24 @@ app.controller('LeariningController', [
 			init();
 			
 			operationRegistryService.register(sum2NumbersService, {
-				maxPos1 : 20,
-				maxPos2 : 20
+				maxPos1 : 10,
+				maxPos2 : 10,
+				maxResult : 20
 			});
 			operationRegistryService.register(sum3NumbersService, {
 				maxPos1 : 10,
 				maxPos2 : 10,
-				maxPos3 : 10
+				maxPos3 : 10,
+				maxResult : 20
 			});
 			operationRegistryService.register(minus2NumbersService, {
-				maxPos1 : 20,
-				maxPos2 : 20
+				maxPos1 : 10,
+				maxPos2 : 10
 			});
 			operationRegistryService.register(multiple2NumbersService, {
 				maxPos1 : 10,
-				maxPos2 : 10
+				maxPos2 : 10,
+				maxResult : 20
 			});
 
 			var saveInLocalStorage = function() {
