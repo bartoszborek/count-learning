@@ -1,0 +1,30 @@
+<div>
+	<div class="table-responsive">
+		<table class="table table-sm"
+			style="width: 350px; margin-left: 300px; background-color: white;">
+			<tbody>
+				<tr ng-repeat="zad in zadania track by $index"
+					ng-class="{'good-line': zad.isValid && zad.computed, 'bad-line' : !zad.isValid && zad.computed}">
+					<td><span>{{zad.operation}} = </span><input
+						style="width: 150px" ng-hide="zad.computed" type="number"
+						ng-model="zad.result" ng-blur="checkResult($index)"></input><span
+						ng-show="zad.computed" ng-bind="zad.result"></span></td>
+					<td>
+						<!-- 				<i ng-class="{'good': zad.isValid && zad.computed, 'bad' : !zad.isValid && zad.computed}"></i> -->
+						<img ng-show="zad.computed" ng-src="{{getImage(zad)}}"></img>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<span class="summary"> <img src="images/good.jpg"></img> :
+		{{summary.valid}}<br> <img src="images/bad.jpg"></img> :
+		{{summary.invalid}}
+	</span>
+	
+	<div style="float: right;">
+		<button class="btn" ng-click="clearStorage()">Clear</button>
+		<button class="btn" ng-click="go('/config')">Config</button>
+	</div>
+</div>

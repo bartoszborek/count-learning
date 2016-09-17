@@ -7,10 +7,19 @@ app.factory('applicationConfigurationService', function() {
 		},
 		getConfig : function(name) {
 			return this.data[name];
+		},
+		changeConfig : function(name, configObj) {
+			this.data[name] = configObj;
+		},
+		getConfigs : function() {
+			return this.data;
+		}, 
+		setConfigs : function(configs) {
+			this.data = configs;
 		}
 	};
 	
-	config.data = [];
+	config.data = {};
 
 	return config;
 });

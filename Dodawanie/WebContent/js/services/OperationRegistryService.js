@@ -6,10 +6,18 @@ app.factory('operationRegistryService', ['applicationConfigurationService', func
 			this.operations.push(operation)
 		},
 		createOperation : function() {
-			var index = Math.floor((this.operations.length * Math.random()));
+			var index;
+			do {
+				index = Math.floor((this.operations.length * Math.random()));
+			} while(!this.operations[index].isAvailable()) 
 			// console.log(index);
+			
 			return this.operations[index].createOperation();
+		},
+		getOperationList : function() {
+			return this.operations;
 		}
+		
 	}
 	registry.operations = [];
 	return registry;

@@ -24,6 +24,10 @@ app.factory('minus2NumbersService', [
 				},
 				getName : function(){
 					return this.name;
+				},
+				isAvailable : function() {
+					return !!applicationConfigurationService
+					.getConfig(this.name).isAvailable;
 				}
 			}
 

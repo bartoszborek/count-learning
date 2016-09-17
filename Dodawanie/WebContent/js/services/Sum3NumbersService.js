@@ -34,6 +34,10 @@ app.factory('sum3NumbersService',
 						},
 						getName : function() {
 							return this.name;
+						},
+						isAvailable : function() {
+							return !!applicationConfigurationService
+							.getConfig(this.name).isAvailable;
 						}
 					}
 

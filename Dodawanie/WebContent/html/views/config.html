@@ -1,0 +1,21 @@
+<div>
+
+<table class="table table-sm"
+			style="width: 800px; margin-left: 50px; background-color: white;">
+			<tbody>
+				<tr ng-repeat="key in configsKeys track by $index">
+					<td><span>{{key}}</span></td>
+					<td ng-repeat="field in getFields(key) track by $index"><span>{{field}} </span><input ng-if="field != 'isAvailable'"
+						style="width: 150px" ng-model="configs[key][field]" type="number"></input>
+						<input ng-if="field == 'isAvailable'"
+						style="width: 150px" ng-model="configs[key][field]" type="checkbox" value="true"></input></td>
+				</tr>
+			</tbody>
+		</table>
+<span ng-repeat="key in configsKeys track by $index">
+
+</span>
+	<div style="float: right;">
+		<button class="btn" ng-click="save()">Save</button>
+	</div>
+</div>

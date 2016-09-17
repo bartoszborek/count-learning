@@ -6,41 +6,22 @@
 <link rel="stylesheet" type="text/css" href="css/dodawanie.css">
 <title>Zadania</title>
 </head>
-<body background="images/dora-the-explorer.jpg" ng-app="LearningApp" ng-controller="LeariningController" style="font-size:24px;">
+<body background="images/dora-the-explorer.jpg" ng-app="LearningApp"  style="font-size:24px;" ng-cloak>
+<div id="prv-billboard">
+<div ng-view></div>
 
-<div id="prv-billboard"></div>
-
-<div class="table-responsive">
-	<table class="table table-sm" style="width:350px; margin-left: 300px;    background-color: white;">
-	<tbody>
-		<tr ng-repeat="zad in zadania" track by $index ng-class="{'good-line': zad.isValid && zad.computed, 'bad-line' : !zad.isValid && zad.computed}">
-			<td>
-				<span>{{zad.operation}} =  </span><input style="width:150px" ng-hide="zad.computed" type="number" ng-model="zad.result" ng-blur="checkResult($index)"></input><span ng-show="zad.computed" ng-bind="zad.result"></span>
-			</td>
-			<td >
-<!-- 				<i ng-class="{'good': zad.isValid && zad.computed, 'bad' : !zad.isValid && zad.computed}"></i> -->
-				<img ng-show="zad.computed" ng-src="{{getImage(zad)}}"></img>
-			</td>
-		</tr>
-		</tbody>
-	</table>
-	</div>
-
-<span class="summary">
-	<img src="images/good.jpg"></img> : {{summary.valid}}<br>
-	<img src="images/bad.jpg"></img> : {{summary.invalid}}
-</span>
-<div style="float: right;">
-	<button class="btn" ng-click="clearStorage()">Clear</button>
+	
 </div>
-
     <!-- jQuery first, then Bootstrap JS. -->
-    <script src="modules/Angular/js/angular.min.js"></script>
+<!--     <script src="modules/Angular/js/angular.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="modules/Bootstrap/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
     
     <script src="js/LearningApp.js"></script>
     <script src="js/controllers/LeariningController.js"></script>
+    <script src="js/controllers/ConfigController.js"></script>
     <script src="js/services/OperationRegistryService.js"></script>
     <script src="js/services/ApplicationConfigurationService.js"></script>
     <script src="js/services/Sum2NumbersService.js"></script>
